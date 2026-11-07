@@ -5,15 +5,18 @@ using namespace std;
 // 1. SINGLY LINKED LIST
 // ==================================================
 
-struct NodeSingly {
+struct NodeSingly
+{
     int data;
-    NodeSingly* next;
+    NodeSingly *next;
 };
 
-void tampilkanSingly(NodeSingly* head) {
-    NodeSingly* bantu = head;
+void tampilkanSingly(NodeSingly *head)
+{
+    NodeSingly *bantu = head;
 
-    while (bantu != NULL) {
+    while (bantu != NULL)
+    {
         cout << bantu->data << " -> ";
         bantu = bantu->next;
     }
@@ -21,10 +24,11 @@ void tampilkanSingly(NodeSingly* head) {
     cout << "NULL" << endl;
 }
 
-void singlyLinkedList() {
-    NodeSingly* A = new NodeSingly;
-    NodeSingly* B = new NodeSingly;
-    NodeSingly* C = new NodeSingly;
+void singlyLinkedList()
+{
+    NodeSingly *A = new NodeSingly;
+    NodeSingly *B = new NodeSingly;
+    NodeSingly *C = new NodeSingly;
 
     A->data = 10;
     B->data = 20;
@@ -39,7 +43,7 @@ void singlyLinkedList() {
     tampilkanSingly(A);
 
     // Menambahkan node 25 setelah node 20
-    NodeSingly* baru = new NodeSingly;
+    NodeSingly *baru = new NodeSingly;
     baru->data = 25;
 
     baru->next = B->next;
@@ -54,19 +58,23 @@ void singlyLinkedList() {
 // 2. CIRCULAR LINKED LIST
 // ==================================================
 
-struct NodeCircular {
+struct NodeCircular
+{
     int data;
-    NodeCircular* next;
+    NodeCircular *next;
 };
 
-void tampilkanCircular(NodeCircular* head) {
-    if (head == NULL) {
+void tampilkanCircular(NodeCircular *head)
+{
+    if (head == NULL)
+    {
         return;
     }
 
-    NodeCircular* bantu = head;
+    NodeCircular *bantu = head;
 
-    do {
+    do
+    {
         cout << bantu->data << " -> ";
         bantu = bantu->next;
     } while (bantu != head);
@@ -74,10 +82,11 @@ void tampilkanCircular(NodeCircular* head) {
     cout << "(kembali ke awal)" << endl;
 }
 
-void circularLinkedList() {
-    NodeCircular* A = new NodeCircular;
-    NodeCircular* B = new NodeCircular;
-    NodeCircular* C = new NodeCircular;
+void circularLinkedList()
+{
+    NodeCircular *A = new NodeCircular;
+    NodeCircular *B = new NodeCircular;
+    NodeCircular *C = new NodeCircular;
 
     A->data = 10;
     B->data = 20;
@@ -92,7 +101,7 @@ void circularLinkedList() {
     tampilkanCircular(A);
 
     // Menambahkan node 40 di akhir
-    NodeCircular* baru = new NodeCircular;
+    NodeCircular *baru = new NodeCircular;
     baru->data = 40;
 
     baru->next = A;
@@ -107,18 +116,21 @@ void circularLinkedList() {
 // 3. DOUBLY LINKED LIST
 // ==================================================
 
-struct NodeDoubly {
+struct NodeDoubly
+{
     int data;
-    NodeDoubly* prev;
-    NodeDoubly* next;
+    NodeDoubly *prev;
+    NodeDoubly *next;
 };
 
-void tampilkanDoubly(NodeDoubly* head) {
-    NodeDoubly* bantu = head;
+void tampilkanDoubly(NodeDoubly *head)
+{
+    NodeDoubly *bantu = head;
 
     cout << "NULL <-> ";
 
-    while (bantu != NULL) {
+    while (bantu != NULL)
+    {
         cout << bantu->data << " <-> ";
         bantu = bantu->next;
     }
@@ -126,10 +138,11 @@ void tampilkanDoubly(NodeDoubly* head) {
     cout << "NULL" << endl;
 }
 
-void doublyLinkedList() {
-    NodeDoubly* A = new NodeDoubly;
-    NodeDoubly* B = new NodeDoubly;
-    NodeDoubly* C = new NodeDoubly;
+void doublyLinkedList()
+{
+    NodeDoubly *A = new NodeDoubly;
+    NodeDoubly *B = new NodeDoubly;
+    NodeDoubly *C = new NodeDoubly;
 
     A->data = 10;
     A->prev = NULL;
@@ -148,7 +161,7 @@ void doublyLinkedList() {
     tampilkanDoubly(A);
 
     // Menambahkan node 25 di antara 20 dan 30
-    NodeDoubly* baru = new NodeDoubly;
+    NodeDoubly *baru = new NodeDoubly;
     baru->data = 25;
 
     baru->prev = B;
@@ -166,22 +179,25 @@ void doublyLinkedList() {
 // 4. CIRCULAR DOUBLY LINKED LIST
 // ==================================================
 
-struct NodeCircularDoubly {
+struct NodeCircularDoubly
+{
     int data;
-    NodeCircularDoubly* prev;
-    NodeCircularDoubly* next;
+    NodeCircularDoubly *prev;
+    NodeCircularDoubly *next;
 };
 
 void tampilkanCircularDoubly(
-    NodeCircularDoubly* head
-) {
-    if (head == NULL) {
+    NodeCircularDoubly *head)
+{
+    if (head == NULL)
+    {
         return;
     }
 
-    NodeCircularDoubly* bantu = head;
-
-    do {
+    NodeCircularDoubly *bantu = head;
+    // apalaah dia fjklasdflkasdfjasdjfjasdfjklasdfjklasdkl;fjasdkl;jflasdfasd
+    do
+    {
         cout << bantu->data << " <-> ";
         bantu = bantu->next;
     } while (bantu != head);
@@ -189,10 +205,11 @@ void tampilkanCircularDoubly(
     cout << "(kembali ke awal)" << endl;
 }
 
-void circularDoublyLinkedList() {
-    NodeCircularDoubly* A = new NodeCircularDoubly;
-    NodeCircularDoubly* B = new NodeCircularDoubly;
-    NodeCircularDoubly* C = new NodeCircularDoubly;
+void circularDoublyLinkedList()
+{
+    NodeCircularDoubly *A = new NodeCircularDoubly;
+    NodeCircularDoubly *B = new NodeCircularDoubly;
+    NodeCircularDoubly *C = new NodeCircularDoubly;
 
     A->data = 10;
     A->prev = C;
@@ -211,7 +228,7 @@ void circularDoublyLinkedList() {
     tampilkanCircularDoubly(A);
 
     // Menambahkan node 40 setelah node 30
-    NodeCircularDoubly* baru = new NodeCircularDoubly;
+    NodeCircularDoubly *baru = new NodeCircularDoubly;
     baru->data = 40;
 
     baru->prev = C;
@@ -230,7 +247,8 @@ void circularDoublyLinkedList() {
 // Semua variasi langsung dijalankan
 // ==================================================
 
-int main() {
+int main()
+{
     singlyLinkedList();
     circularLinkedList();
     doublyLinkedList();
