@@ -14,7 +14,7 @@ struct NodeSingly
 void tampilkanSingly(NodeSingly *head)
 {
     NodeSingly *bantu = head;
-
+// fguaiosdfjioasdjfjasdfjoasdjfoajsdfujasduiofasdiofuioasdf
     while (bantu != NULL)
     {
         cout << bantu->data << " -> ";
